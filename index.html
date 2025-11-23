@@ -451,17 +451,17 @@
                 <h3 className="text-lg font-semibold text-yellow-500 mb-4">Languages & Libraries</h3>
                 <div className="flex flex-wrap gap-3">{skills.languages.map(s => <SkillBadge key={s} skill={s} />)}</div>
               </div>
-              <div>
+              <div className="mb-8">
                 <h3 className="text-lg font-semibold text-yellow-500 mb-4">Tools & Platforms</h3>
                 <div className="flex flex-wrap gap-3">{skills.tools.map(s => <SkillBadge key={s} skill={s} />)}</div>
               </div>
-              <div>
+              <div className="mb-8">
                 <h3 className="text-lg font-semibold text-yellow-500 mb-4">Focus Areas</h3>
                 <div className="flex flex-wrap gap-3">{skills.focusares.map(s => <SkillBadge key={s} skill={s} />)}</div>
               </div>
             </div>
           </Section>
-
+          
           {/* Certifications */}
           <Section id="certifications" title="Certifications" className="bg-gray-900/30">
             <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-4">
