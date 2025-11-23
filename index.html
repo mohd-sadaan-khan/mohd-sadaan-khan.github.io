@@ -235,8 +235,7 @@
                 href={url ? url : "#"} 
                 target={url ? "_blank" : undefined}
                 rel="noopener noreferrer"
-                className="text-lightblue-300 underline hover:text-blue-400 transition-colors"
-              >
+                className="text-lightblue-300 underline hover:text-blue-400 transition-colors">
                 {company}
               </a>
               {' '}• {location}
@@ -314,7 +313,8 @@
 
       const skills = {
         languages: ['C/C++', 'Rust', 'Python (Flask, Django, Pandas, NumPy etc.)', 'SQL', 'R', 'GraphQL'],
-        tools: ['Git', 'AWS', 'Azure', 'Snowflake', 'K8s/Docker', 'Airflow', 'Power BI']
+        tools: ['Git', 'AWS', 'Azure', 'Snowflake', 'K8s/Docker', 'Airflow', 'Power BI'],
+        focusares :['Backend Scalability', 'Data Processing', 'Distributed Systems', 'ETL Pipelines' 'API Design & Integration']
       };
 
       const certifications = [
@@ -422,6 +422,8 @@
                 <p className="text-gray-300 text-lg leading-relaxed text-center md:text-left">
                   I'm a <span className="text-yellow-500">Senior Developer</span> at AllianceBernstein. I was drawn to technology by a genuine curiosity about large-scale systems and a commitment to building dependable, impactful projects. Specializing in backend architecture and robust data systems, I focus on creating scalable and highly reliable infrastructure for critical platforms. My experience involves maintaining continuous data pipelines, integrating key APIs, and developing automation tools to solve complex business challenges with practical, high-quality code. I trust data to the core, viewing it as the foundation for all reliable solutions. I also yearn to learn new technologies and remain firmly focused on continuous growth to deliver effective and modern solutions.
                 </p>
+              </div>
+              <div>
                 <p className="text-center md:text-left pt-2 text-gray-300 text-lg">
                   Curious about my work, need a hand, or have a cool opportunity to chat about? 
                   <a 
@@ -453,6 +455,10 @@
               <div>
                 <h3 className="text-lg font-semibold text-yellow-500 mb-4">Tools & Platforms</h3>
                 <div className="flex flex-wrap gap-3">{skills.tools.map(s => <SkillBadge key={s} skill={s} />)}</div>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-yellow-500 mb-4">Focus Areas</h3>
+                <div className="flex flex-wrap gap-3">{skills.focusares.map(s => <SkillBadge key={s} skill={s} />)}</div>
               </div>
             </div>
           </Section>
@@ -503,7 +509,7 @@
 
           {/* Footer */}
           <footer className="py-8 text-center border-t border-blue-900/50 relative z-10">
-            <p className="text-gray-500 text-sm">© 2025 Mohd. Sadaan Khan • Built with <span className="text-yellow-500">♡</span></p>
+            <p className="text-gray-500 text-sm"> Built with <span className="text-yellow-500">♡</span></p>
           </footer>
         </div>
       );
