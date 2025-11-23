@@ -323,7 +323,14 @@
           titleUrl: 'https://www.quantinsti.com/epat',
           issuer: 'QuantInsti', 
           issuerUrl: 'https://www.quantinsti.com/epat', 
-          date: '2025' 
+          date: '2025',
+          focusAreas: [ 
+                        'Quantitative Finance',
+                        'Options Trading & Strategies', 
+                        'Portfolio Optimization & Risk Management', 
+                        'Market Microstructure',
+                        'Machine Learning for Trading'
+                      ]
         }
       ];
 
@@ -466,7 +473,7 @@
           <Section id="certifications" title="Certifications" className="bg-gray-900/30">
             <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-4">
               {certifications.map((cert, i) => (
-                <div key={i} className="bg-gray-900/80 border border-blue-900 rounded-lg p-5 hover:border-yellow-500 transition-all duration-300 backdrop-blur-sm flex items-center gap-4">
+                <div key={i} className="bg-gray-900/80 border border-blue-900 rounded-lg p-5 hover:border-yellow-500 transition-all duration-300 backdrop-blur-sm flex flex-col gap-4">
                   <div>
                     <h3 className="text-lg font-bold text-yellow-500">
                       <a 
@@ -488,10 +495,21 @@
                       {' '}• {cert.date}
                     </p>
                   </div>
+                  {cert.focusAreas && cert.focusAreas.length > 0 && (
+                    <div className="text-yellow-500 text-sm font-semibold">
+                      <p className="mt-2">Focus Areas:</p>
+                      <ul className="list-disc pl-4">
+                        {cert.focusAreas.map((focusArea, j) => (
+                          <li key={j}>{focusArea}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
                 </div>
               ))}
             </div>
           </Section>
+
 
           {/* Achievements */}
           <Section id="achievements" title="Achievements">
